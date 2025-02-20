@@ -1,0 +1,50 @@
+.servicios {
+    padding: 50px 0;
+    background: #f4f4f4;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #6a1b9a;
+    text-transform: uppercase;
+  }
+  
+  .servicio-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    background: white;
+  }
+  
+  .servicio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .servicio-card img {
+    height: 200px;
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  .servicio-card:hover img {
+    filter: grayscale(0%);
+  }
+  
+  .servicio-card .card-body {
+    background: #fff;
+    padding: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #6a1b9a;
+    border: none;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #4a148c;
+  }

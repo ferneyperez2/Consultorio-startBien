@@ -1,0 +1,94 @@
+/* Estilos Generales */
+.home {
+    font-family: "Arial", sans-serif;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url("/imagenes/banner.jpg") center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .hero h1 span {
+    color: #4caf50;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+  }
+  
+  .hero .btn {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    background-color: #4caf50;
+    border: none;
+  }
+  
+  .hero .btn:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Sección de Servicios */
+  .servicios {
+    padding: 50px 0;
+  }
+  
+  .servicios h2 {
+    font-size: 2.5rem;
+    color: #4caf50;
+    margin-bottom: 30px;
+  }
+  
+  .servicio-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .servicio-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .servicio-card .icon {
+    font-size: 3rem;
+    color: #4caf50;
+    margin-bottom: 10px;
+  }
+  
+  /* Contacto */
+  .contacto {
+    background: #4caf50;
+    color: white;
+    padding: 40px 20px;
+  }
+  
+  .contacto h2 {
+    font-size: 2.5rem;
+  }
+  
+  .contacto .btn {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    background-color: white;
+    color: #4caf50;
+  }
+  
+  .contacto .btn:hover {
+    background-color: #388e3c;
+    color: white;
+  }
