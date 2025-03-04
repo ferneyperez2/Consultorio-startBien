@@ -1,94 +1,79 @@
-/* Estilos Generales */
-.home {
-    font-family: "Arial", sans-serif;
-    color: #333;
+/* Importar Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor Principal */
+.services-container {
+  text-align: center;
+  padding: 50px 20px;
+  background: #ffffff;
+}
+
+/* Título */
+.services-container h2 {
+  color: #0077b6;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Grid de Servicios */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Tarjeta de Servicio */
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Icono */
+.service-card i {
+  font-size: 40px;
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+/* Título del Servicio */
+.service-card h3 {
+  color: #333;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* Descripción */
+.service-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 30px 10px;
   }
-  
-  /* Hero Section */
-  .hero {
-    background: url("/imagenes/banner.jpg") center/cover no-repeat;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+
+  .services-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .hero h1 span {
-    color: #4caf50;
-  }
-  
-  .hero p {
-    font-size: 1.5rem;
-  }
-  
-  .hero .btn {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    background-color: #4caf50;
-    border: none;
-  }
-  
-  .hero .btn:hover {
-    background-color: #388e3c;
-  }
-  
-  /* Sección de Servicios */
-  .servicios {
-    padding: 50px 0;
-  }
-  
-  .servicios h2 {
-    font-size: 2.5rem;
-    color: #4caf50;
-    margin-bottom: 30px;
-  }
-  
-  .servicio-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .servicio-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .servicio-card .icon {
-    font-size: 3rem;
-    color: #4caf50;
-    margin-bottom: 10px;
-  }
-  
-  /* Contacto */
-  .contacto {
-    background: #4caf50;
-    color: white;
-    padding: 40px 20px;
-  }
-  
-  .contacto h2 {
-    font-size: 2.5rem;
-  }
-  
-  .contacto .btn {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    background-color: white;
-    color: #4caf50;
-  }
-  
-  .contacto .btn:hover {
-    background-color: #388e3c;
-    color: white;
-  }
+}

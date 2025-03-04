@@ -1,26 +1,34 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./Component/Header";
-import Citas from "./Component/Cita";
-import Contact from "./Component/Contact";
 import Home from "./Component/Home";
+import Services from "./Component/Servicio";
+import Contact from "./Component/Contact";
+import AgendarCita from "./Component/BookingSection";
+import Sidebar from "./Component/Sidebar";
+import Header from "./Component/Header";
+import Testimonios from "./Component/Testimonios";
 
-import Servicios from "./Component/Servicio";
 
-const App = () => {
+import './App.css';
+import Navbar from "./Component/Navbar";
+function App() {
   return (
     <Router>
-      <Header />
+      <Header/>
+      <Sidebar />
       <Routes>
-      <Route path="/" element={<Home />} />
-        <Route path="/Servicios" element={<Servicios />} />
-        <Route path="Contact" element={<Contact />} />
-        <Route path="/Citas" element={<Citas/>} />
- 
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/testimonio" element={<Testimonios />} /> */}
+        <Route path="/agendar-cita" element={<AgendarCita />} />
       </Routes>
+
+  
+
     </Router>
+
+    
   );
-};
+}
 
 export default App;

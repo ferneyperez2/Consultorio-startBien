@@ -1,21 +1,41 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../Component/img/logo.jpeg";
-import "./Header.css";
+import React, { useState, useEffect } from "react";
+import logo from "../Component/img/logo.jpeg"; 
+import { FaSun, FaMoon, FaBars } from "react-icons/fa";
+import "./Header.css"; 
 
-const Header = () => {
+const Header= () => {
+  // Leer la preferencia guardada en localStorage
+  const storedTheme = localStorage.getItem("theme") || "light";
+  const [modoOscuro, setModoOscuro] = useState(storedTheme === "dark");
+
+  useEffect(() => {
+    // Aplicar la clase de modo oscuro si es necesario
+    if (modoOscuro) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [modoOscuro]);
+
+  const toggleModo = () => {
+    const newTheme = !modoOscuro ? "dark" : "light";
+    setModoOscuro(!modoOscuro);
+    localStorage.setItem("theme", newTheme); // Guardar en localStorage
+  };
+
   return (
     <nav className="navbar">
-      <div className="logo">
-        <img src={Logo} alt="StartBien" />
-        <h1>STARTBIEN</h1>
+      <div className="navbar-left">
+        <FaBars className="menu-icon" />
+        <img src={logo} alt="StartBien" className="logo" />
       </div>
-      <ul>
-        <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/servicios">Servicios</Link></li>
-        <li><Link to="/Contact">Contacto</Link></li>
-        <li><Link to="/Citas">Agendar Cita</Link></li>
-      </ul>
+      <div className="navbar-right">
+        <span className="brand">StartBien</span>
+        <button className="modo-toggle" onClick={toggleModo}>
+          {modoOscuro ? <FaSun className="icon" /> : <FaMoon className="icon" />}
+          {modoOscuro ? "Modo Claro" : "Modo Oscuro"}
+        </button>
+      </div>
     </nav>
   );
 };
