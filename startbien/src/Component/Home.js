@@ -5,12 +5,12 @@ import { FaUserMd, FaCalendarCheck, FaHeadset } from "react-icons/fa"; // Ícono
 const Home = () => {
   return (
     <section className="services-container">
-      <h2>Nuestros Servicios</h2>
+      <h2>StartBien</h2>
       <div className="services-grid">
         <div className="service-card">
           <FaUserMd />
           <h3>Atención Especializada</h3>
-          <p>Fisioterapia avanzada con especialistas certificados.</p>
+          <p>Fisioterapia avanzada con especialistas para darte una mejor atencion.</p>
         </div>
 
         <div className="service-card">

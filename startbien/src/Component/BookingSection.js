@@ -7,6 +7,9 @@ const AppointmentForm = () => {
   const [time, setTime] = useState(localStorage.getItem("time") || "");
   const [name, setName] = useState(localStorage.getItem("name") || "");
   const [phone, setPhone] = useState(localStorage.getItem("phone") || "");
+  const [identi, setIdenti] = useState(localStorage.getItem("identi") || "");
+  const [Eps, setEps] = useState(localStorage.getItem("Eps") || "");
+  const [Regimen, setRegimen] = useState(localStorage.getItem("Regimen") || "");
   const [error, setError] = useState("");
 
   // Guardar en localStorage cada vez que cambia un campo
@@ -16,7 +19,10 @@ const AppointmentForm = () => {
     localStorage.setItem("time", time);
     localStorage.setItem("name", name);
     localStorage.setItem("phone", phone);
-  }, [service, date, time, name, phone]);
+    localStorage.setItem("identi", identi);
+    localStorage.setItem("Eps", Eps);
+    localStorage.setItem("Regimen", Regimen);
+  }, [service, date, time, name, phone,identi,Eps,Regimen]);
 
   // Validar que la fecha no sea menor a hoy
   const handleDateChange = (e) => {
@@ -33,12 +39,20 @@ const AppointmentForm = () => {
   };
 
   const handleWhatsApp = () => {
-    if (!service || !date || !time || !name || !phone) {
+    if (!service || !date || !time || !name || !phone || !identi || !Eps || !Regimen) {
       alert("Por favor completa todos los campos.");
       return;
-    }
+    }else{
+      alert(" nos comunicaremos por whatsapp");
+    };
 
-    const message = `Hola, quiero agendar una cita para ${service} el ${date} a las ${time}. Mi nombre es ${name} y mi número es ${phone}.`;
+    const message = `Hola, quiero agendar una cita mi nombre es: ${name},
+    mi identificacion es : ${identi},
+    mi eps es: ${Eps}, 
+    mi regimen es: ${Regimen},
+ con la Especialidad   ${service} ,
+  el dia  ${date} a las ${time},
+   mi número es ${phone}.`;
     const whatsappURL = `https://wa.me/57${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
   };
@@ -73,16 +87,51 @@ const AppointmentForm = () => {
         </div>
 
         <div className="form-group">
-          <label>Nombre:</label>
-          <input type="text" placeholder="Tu nombre" value={name} onChange={(e) => setName(e.target.value)} />
+          <label>Nombre - apellido:</label>
+          <input type="text" placeholder="Tu nombre y apellido " value={name} onChange={(e) => setName(e.target.value)} />
+        </div>
+        
+        {/* identificacion */}
+
+        <div className="form-group">
+          <label>Identificacion:</label>
+          <input type="number" placeholder="Tu identificacion" value={identi} onChange={(e) => setIdenti(e.target.value)} />
         </div>
 
+        {/* Eps */}
+
+        <div className="form-group">
+          <label>EPS:</label>
+          <select value={Eps} onChange={(e) => setEps(e.target.value)}>
+            <option value="">Selecciona Tu Eps</option>
+            <option value="Fonoaudiologia">Nueva EPS.</option>
+            <option value="Psicologia">Salud Total.</option>
+            <option value="Terapia Fisica">Coosalud.</option>
+            <option value="Terapia Respiratoria">Capital Salud.</option>
+            <option value="M edicina General">Cajacopi.</option>
+            <option value="Terapia  Ocupacional">Wayu.</option>
+            <option value="Ortepedia">Aliansalud.</option>
+          </select>
+        </div>
+{/* Regimen */}
+        <div className="form-group">
+          <label>Regimen:</label>
+          <select value={Regimen} onChange={(e) => setRegimen(e.target.value)}>
+            <option value="">Selecciona Tu Regimen</option>
+            <option value="Fonoaudiologia">Contributivo cotizante  </option>
+            <option value="Psicologia">Subsidiado.</option>
+            <option value="Terapia Fisica">Cotributivo beneficiario</option>
+       
+          </select>
+        </div>
+
+{/* Telefono */}
         <div className="form-group">
           <label>Teléfono:</label>
           <input type="tel" placeholder="Tu teléfono" value={phone} onChange={(e) => setPhone(e.target.value)} />
         </div>
 
-        <button type="button" onClick={handleWhatsApp}>Agendar por WhatsApp</button>
+        <button type="button" onClick={handleWhatsApp }>Agendar por WhatsApp</button>
       </form>
     </div>
   );

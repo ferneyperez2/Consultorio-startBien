@@ -13,6 +13,7 @@ import Navbar from "./Component/Navbar";
 function App() {
   return (
     <Router>
+
       <Header/>
       <Sidebar />
       <Routes>

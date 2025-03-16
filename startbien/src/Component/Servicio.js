@@ -32,6 +32,7 @@ function Services() {
           <div key={index} className="service-card">
             <img src={service.img} alt={service.name} />
             <h3>{service.name}</h3>
+            <h3>{service.desc}</h3>
             <button onClick={() => setSelectedService(service)}>Más información</button>
           </div>
         ))}
