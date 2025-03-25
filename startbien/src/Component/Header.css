@@ -70,3 +70,9 @@
 .dark-mode .modo-toggle {
   color: #ffcc00; /* Cambia el color del texto en modo oscuro */
 }
+
+/* Asegurar que toda la página adopte el modo oscuro */
+.dark-mode body {
+  background-color: #121212;
+  color: white;
+}

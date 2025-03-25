@@ -3,7 +3,7 @@ import logo from "../Component/img/image.png";
 import { FaSun, FaMoon, FaBars } from "react-icons/fa";
 import "./Header.css"; 
 
-const Header= () => {
+const Header = () => {
   // Leer la preferencia guardada en localStorage
   const storedTheme = localStorage.getItem("theme") || "light";
   const [modoOscuro, setModoOscuro] = useState(storedTheme === "dark");
