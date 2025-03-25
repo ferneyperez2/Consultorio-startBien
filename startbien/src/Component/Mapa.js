@@ -17,26 +17,30 @@ const MapaConsultorio = () => {
     };
   
     const agregarMarcadorAvanzado = (map) => {
-      if (window.google) {  
-        const marcadorAvanzado = new window.google.maps.marker.AdvancedMarkerElement({
-          position: centro,
-          map: map,
-          title: 'Consultorio'
-        });
-  
-        // Añadir el marcador al mapa
-        marcadorAvanzado.setMap(map);
-      } else {
-        console.error('Google Maps no ha cargado correctamente');
-      }
-    };
+        if (window.google && window.google.maps && window.google.maps.marker && window.google.maps.marker.AdvancedMarkerElement) {
+          try {
+            const marcadorAvanzado = new window.google.maps.marker.AdvancedMarkerElement({
+              position: centro,
+              map: map,
+              title: 'StartBien Consultorio',
+              icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+            });
+            marcadorAvanzado.setMap(map);
+          } catch (error) {
+            console.error('Error al crear el marcador avanzado:', error);
+          }
+        } else {
+          console.error('AdvancedMarkerElement no está disponible en la API de Google Maps');
+        }
+      };
+      
   
     useEffect(() => {
       setMapaCargado(true);
     }, []);
   
     return (
-      <LoadScript googleMapsApiKey="TU_API_KEY">
+      <LoadScript googleMapsApiKey="AIzaSyAUZi5yBdxBAY11RWzA1PZTMXvdeDS1jsI">
         {mapaCargado && (
           <GoogleMap
             mapContainerStyle={estiloContenedorMapa}
