@@ -1,0 +1,77 @@
+.container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.header {
+  background: #005f9e;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about, .services, .booking {
+  padding: 20px;
+  margin: 20px;
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+button, .whatsapp-button {
+  background: #005f9e;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .service-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
