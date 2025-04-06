@@ -53,7 +53,8 @@ const AppointmentForm = () => {
  con la Especialidad   ${service} ,
   el dia  ${date} a las ${time},
    mi número es ${phone}.`;
-    const whatsappURL = `https://wa.me/57${phone}?text=${encodeURIComponent(message)}`;
+   const whatsappURL = `https://wa.me/573122845333?text=${encodeURIComponent(message)}`;
+
     window.open(whatsappURL, "_blank");
   };
 

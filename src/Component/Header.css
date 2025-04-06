@@ -16,6 +16,7 @@
   position: absolute;
   left: 10px; /* Ajusta la posición del menú */
   z-index: 10;
+  justify-content: space-between
 }
 
 .logo-container {
