@@ -112,13 +112,13 @@ const AppointmentForm = () => {
             <option value="Terapia Respiratoria">CAPITAL SALUD.</option>
             <option value="M edicina General">CAJACOPI.</option>
             <option value="Terapia  Ocupacional">WAYU.</option>
-            <option value="">ALIANSALUD.</option>
-            <option value="">MUTUALSER.</option>
-            <option value="">MAGISTERIO.</option>
-            <option value="">PARTICULAR.</option>
-            <option value="">CAJA COPI.</option>
-            <option value="">SAVIA SALUD.</option>
-            <option value="">SANITAS</option>
+            <option value="Aliansalud">ALIANSALUD.</option>
+            <option value="mutualser">MUTUALSER.</option>
+            <option value="magisterio">MAGISTERIO.</option>
+            <option value="particular">PARTICULAR.</option>
+            <option value="cajacopi">CAJA COPI.</option>
+            <option value="saviasalud">SAVIA SALUD.</option>
+            <option value="sanitas">SANITAS</option>
           </select>
         </div>
 {/* Regimen */}
