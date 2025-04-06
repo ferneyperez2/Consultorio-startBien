@@ -129,7 +129,7 @@ const AppointmentForm = () => {
             <option value="Fonoaudiologia">REGIMEN CONTRIBUTIVO CONTIZANTE  </option>
             <option value="Psicologia">REGIMEN SUBSIDIADO</option>
             <option value="Terapia Fisica">REGIMEN CONTRIBUTIVO CONTIZANTE</option>
-            <option value="">NO TENGO REGIMEN</option>
+            <option value="no tengo regimen">NO TENGO REGIMEN</option>
        
           </select>
         </div>
