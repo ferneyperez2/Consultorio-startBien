@@ -1,11 +1,12 @@
-version: "3"
+version: '3.8'
+
 services:
-  landing:
+  app:
     build: .
+    container_name: startbien-app
     ports:
       - "3000:3000"
     volumes:
       - .:/app
-      - /app/node_modules
-    environment:
-      - NODE_ENV=development
+    restart: unless-stopped
+    command: npm start
