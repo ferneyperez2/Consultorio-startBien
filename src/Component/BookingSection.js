@@ -112,13 +112,13 @@ const AppointmentForm = () => {
             <option value="Terapia Respiratoria">CAPITAL SALUD.</option>
             <option value="M edicina General">CAJACOPI.</option>
             <option value="Terapia  Ocupacional">WAYU.</option>
-            <option value="Ortepedia">ALIANSALUD.</option>
-            <option value="Ortepedia">MUTUALSER.</option>
-            <option value="Ortepedia">MAGISTERIO.</option>
-            <option value="Ortepedia">PARTICULAR.</option>
-            <option value="Ortepedia">CAJA COPI.</option>
-            <option value="Ortepedia">SAVIA SALUD.</option>
-            <option value="Ortepedia">SANITAS</option>
+            <option value="">ALIANSALUD.</option>
+            <option value="">MUTUALSER.</option>
+            <option value="">MAGISTERIO.</option>
+            <option value="">PARTICULAR.</option>
+            <option value="">CAJA COPI.</option>
+            <option value="">SAVIA SALUD.</option>
+            <option value="">SANITAS</option>
           </select>
         </div>
 {/* Regimen */}
@@ -126,9 +126,10 @@ const AppointmentForm = () => {
           <label>Regimen:</label>
           <select value={Regimen} onChange={(e) => setRegimen(e.target.value)}>
             <option value="">Selecciona Tu Regimen</option>
-            <option value="Fonoaudiologia">Contributivo cotizante  </option>
-            <option value="Psicologia">Subsidiado.</option>
-            <option value="Terapia Fisica">Cotributivo beneficiario</option>
+            <option value="Fonoaudiologia">REGIMEN CONTRIBUTIVO CONTIZANTE  </option>
+            <option value="Psicologia">REGIMEN SUBSIDIADO</option>
+            <option value="Terapia Fisica">REGIMEN CONTRIBUTIVO CONTIZANTE</option>
+            <option value="">NO TENGO REGIMEN</option>
        
           </select>
         </div>
