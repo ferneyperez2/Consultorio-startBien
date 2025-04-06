@@ -53,6 +53,7 @@ const AppointmentForm = () => {
  con la Especialidad   ${service} ,
   el dia  ${date} a las ${time},
    mi número es ${phone}.`;
+  //  este es el numero de la cita de whatsApp 
    const whatsappURL = `https://wa.me/573122845333?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappURL, "_blank");
@@ -112,6 +113,11 @@ const AppointmentForm = () => {
             <option value="M edicina General">Cajacopi.</option>
             <option value="Terapia  Ocupacional">Wayu.</option>
             <option value="Ortepedia">Aliansalud.</option>
+            <option value="Ortepedia">Mutualser.</option>
+            <option value="Ortepedia">Magisterio.</option>
+            <option value="Ortepedia">Particular.</option>
+            <option value="Ortepedia">Caja copi.</option>
+            <option value="Ortepedia">sabia salud.</option>
           </select>
         </div>
 {/* Regimen */}
