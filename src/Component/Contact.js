@@ -56,7 +56,7 @@ const Contact = () => {
           
               <h3>Horario</h3>
               <p>Lunes a Viernes</p>
-              <p>7:00 AM – 7:00 PM</p>
+              <p>07:00 AM – 5:00 PM</p> 
             </div>
           </div>
 

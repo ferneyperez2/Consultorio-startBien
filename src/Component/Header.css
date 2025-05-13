@@ -31,9 +31,10 @@
 }
 
 .title {
-  font-size: 20px;
+  font-size: 60px;
   font-weight: bold;
   color: #ff9800;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .Text-header{
