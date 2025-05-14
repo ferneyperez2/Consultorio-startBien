@@ -1,79 +1,87 @@
-/* Importar Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-body {
-  font-family: "Poppins", sans-serif;
-  background: #f9f9f9;
-  margin: 0;
-  padding: 0;
-}
-
-/* Contenedor Principal */
 .services-container {
+  padding: 40px 20px;
   text-align: center;
-  padding: 50px 20px;
-  background: #ffffff;
+  background-color: #f9f9f9; /* Un fondo muy claro */
 }
 
-/* Título */
 .services-container h2 {
-  color: #0077b6;
-  font-size: 28px;
-  margin-bottom: 20px;
-  font-weight: 600;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 
-/* Grid de Servicios */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Tarjeta de Servicio */
 .service-card {
-  background: white;
-  padding: 25px;
+  background-color: #fff;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Icono */
-.service-card i {
-  font-size: 40px;
-  color: #0077b6;
+.service-card svg { /* Estilos para los íconos */
+  font-size: 2.5rem;
+  color: #007bff; /* Un color azul moderno */
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  color: #333;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
-/* Título del Servicio */
-.service-card h3 {
-  color: #333;
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-/* Descripción */
 .service-card p {
   color: #666;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Responsivo */
+/* Estilos para pantallas más pequeñas */
 @media (max-width: 768px) {
   .services-container {
-    padding: 30px 10px;
+      padding: 30px 15px;
+  }
+
+  .services-container h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
   }
 
   .services-grid {
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+      gap: 20px;
+  }
+
+  .service-card {
+      padding: 20px;
+  }
+
+  .service-card svg {
+      font-size: 2rem;
+      margin-bottom: 10px;
+  }
+
+  .service-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+  }
+
+  .service-card p {
+      font-size: 0.9rem;
   }
 }
