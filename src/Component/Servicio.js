@@ -1,87 +1,92 @@
-import React, { useState } from "react";
+import React from "react";
 import './Servicio.css';
-import Fonoaudiologia from "./img/Fonoaudiología.png";
-import Psicologia from "./img/Psicología.png";
-import TerapiaFisica from "./img/Terapia Física.png";
-import TerapiaRepiratoria from "./img/Terapia Respiratoria.png";
-import MedicinaGeneral from "./img/Medicina General.png";
-import TerapiaOcupacional from "./img/Terapia Ocupacional.png";
-import Ortopedia from "./img/ortopedia.png";
+import HealingIcon from '@mui/icons-material/Healing';
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import RespiratoryTherapyIcon from '@mui/icons-material/RespiratoryTherapy'; // Updated import
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
+import OrthopedicIcon from '@mui/icons-material/Orthopedic'; // Updated import
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ServicioCard from "./ServicioCard";
 
-const serviciosData = [
-    {
-        id: "fonoaudiologia",
-        name: "Fonoaudiología",
-        img: Fonoaudiologia,
-        desc: "Disciplina encargada de evaluar, diagnosticar, promocionar y prevenir los trastornos del lenguaje, el habla, la deglución, la voz y la audición en personas de todas edades. Todo, mediante la combinación interdisciplinar de las ciencias de la salud, la psicología y la lingüística.",
-    },
-    {
-        id: "psicologia",
-        name: "Psicología",
-        img: Psicologia,
-        desc: "La psicología es la ciencia que estudia la conducta humana y los procesos mentales. Al ser bastante amplia, para su estudio y aplicación se divide en dos vertientes: la psicología básica y la psicología aplicada.",
-    },
-    {
-        id: "terapia-fisica",
-        name: "Terapia Física",
-        img: TerapiaFisica,
-        desc: "La Terapia Física busca prevenir, mejorar o restaurar las capacidades físicas de los pacientes que padezcan de alguna enfermedad o lesiones por accidente o a causa de un daño neuromusculoesquelético adquirido o congénito, esto por medio de la correcta valoración funcional con el fin de determinar las deficiencias",
-    },
-    {
-        id: "terapia-respiratoria",
-        name: "Terapia Respiratoria",
-        img: TerapiaRepiratoria,
-        desc: "La terapia respiratoria es un conjunto de técnicas que se usan para tratar problemas respiratorios. Su objetivo es mejorar la capacidad pulmonar, fortalecer los músculos respiratorios y aliviar los síntomas de las enfermedades respiratorias.",
-    },
-    {
-        id: "medicina-general",
-        name: "Medicina General",
-        img: MedicinaGeneral,
-        desc: "La medicina general es una especialidad médica que se encarga de la atención integral de las personas, desde la infancia hasta la vejez. Es la primera línea de atención médica, y es conocida como la puerta de entrada al sistema de salud.",
-    },
-    {
-        id: "terapia-ocupacional",
-        name: "Terapia Ocupacional",
-        img: TerapiaOcupacional,
-        desc: "La terapia ocupacional es un tratamiento que ayuda a las personas a realizar actividades cotidianas de manera más autónoma. Se basa en el uso de actividades como el trabajo, el cuidado y el juego.",
-    },
-    {
-        id: "ortopedia",
-        name: "Ortopedia",
-        img: Ortopedia,
-        desc: "La ortopedia es la especialidad médica que se enfoca en el diagnóstico, tratamiento y rehabilitación de lesiones y enfermedades del sistema musculoesquelético, que incluye huesos, articulaciones, ligamentos, tendones y músculos.",
-    },
-];
+    const serviciosData = [
+        {
+            id: "fonoaudiologia",
+            name: "Fonoaudiología",
+            icon: <HealingIcon sx={{ fontSize: 30 }} />,
+            desc: "Disciplina encargada de evaluar, diagnosticar...",
+            linkTo: "/servicios/fonoaudiologia",
+        },
+        {
+            id: "psicologia",
+            name: "Psicología",
+            icon: <PsychologyIcon sx={{ fontSize: 30 }} />,
+            desc: "La psicología es la ciencia que estudia la conducta humana...",
+            linkTo: "/servicios/psicologia",
+        },
+        {
+            id: "terapia-fisica",
+            name: "Terapia Física",
+            icon: <FitnessCenterIcon sx={{ fontSize: 30 }} />,
+            desc: "La Terapia Física busca prevenir, mejorar...",
+            linkTo: "/servicios/terapia-fisica",
+        },
+        {
+            id: "terapia-respiratoria",
+            name: "Terapia Respiratoria",
+            icon: <RespiratoryTherapyIcon sx={{ fontSize: 30 }} />, // This import should now work
+            desc: "La terapia respiratoria es un conjunto de técnicas...",
+            linkTo: "/servicios/terapia-respiratoria",
+        },
+        {
+            id: "medicina-general",
+            name: "Medicina General",
+            icon: <LocalHospitalIcon sx={{ fontSize: 30 }} />,
+            desc: "La medicina general es una especialidad médica...",
+            linkTo: "/servicios/medicina-general",
+        },
+        {
+            id: "terapia-ocupacional",
+            name: "Terapia Ocupacional",
+            icon: <AccessibilityNewIcon sx={{ fontSize: 30 }} />,
+            desc: "La terapia ocupacional es un tratamiento que ayuda...",
+            linkTo: "/servicios/terapia-ocupacional",
+        },
+        {
+            id: "ortopedia",
+            name: "Ortopedia",
+            icon: <OrthopedicIcon sx={{ fontSize: 30 }} />, // This import should now work
+            desc: "La ortopedia es la especialidad médica que se enfoca...",
+            linkTo: "/servicios/ortopedia",
+        },
+    ];
 
-function Services() {
-    return (
-        <motion.section
-            id="services"
-            className="services-section"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeInOut' } }}
-            viewport={{ once: true, amount: 0.2 }}
-        >
-            <h2>Servicios</h2>
-            <div className="services-grid">
-                {serviciosData.map((servicio) => (
-                    <Link to={`/servicios/${servicio.id}`} key={servicio.id} className="service-card-link">
-                        <motion.div
-                            className="service-card"
-                            whileHover={{ scale: 1.05, boxShadow: "0 6px 16px rgba(0, 0, 0, 0.2)" }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <img src={servicio.img} alt={servicio.name} className="service-image" />
-                            <h3>{servicio.name}</h3>
-                            <button className="more-info-button">Más información</button>
+    function Services() {
+        return (
+            <motion.section
+                id="services"
+                className="services-section"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeInOut' } }}
+                viewport={{ once: true, amount: 0.2 }}
+            >
+                <h2>Servicios</h2>
+                <div className="services-grid">
+                    {serviciosData.map((servicio) => (
+                        <motion.div key={servicio.id} className="service-card-wrapper">
+                            <ServicioCard
+                                icon={servicio.icon}
+                                title={servicio.name}
+                                description={servicio.desc}
+                                linkTo={`/servicios/${servicio.id}`}
+                            />
                         </motion.div>
-                    </Link>
-                ))}
-            </div>
-        </motion.section>
-    );
-}
+                    ))}
+                </div>
+            </motion.section>
+        );
+    }
 
-export default Services;
+    export default Services;

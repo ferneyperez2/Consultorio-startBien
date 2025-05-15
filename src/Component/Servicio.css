@@ -1,107 +1,29 @@
-.services-section {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #f7f7f7; /* Un fondo gris claro y moderno */
-}
-
-.services-section h2 {
-  color: #333;
-  font-size: 2.8rem;
-  margin-bottom: 40px;
-  font-weight: 600;
-}
-
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  padding: 0 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ejemplo de grid responsivo */
+  gap: 20px;
+  padding: 20px;
 }
 
+.service-card-wrapper {
+  height: 100%; /* Asegura que el contenedor ocupe la altura para que ServicioCard se estire */
+}
+
+/* Elimina o ajusta los estilos existentes para .service-card y .service-card-link */
 .service-card-link {
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  color: inherit; /* Hereda el color del texto */
-  display: block; /* Hace que el enlace ocupe todo el contenedor */
+  text-decoration: none; /* Ya no es un enlace directo */
+  display: block; /* Para que ocupe el espacio */
+  height: 100%;
 }
 
 .service-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  overflow: hidden; /* Para que la imagen respete el border-radius */
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  /* Elimina estilos innecesarios ya que ServicioCard tiene su propio estilo */
 }
 
 .service-image {
-  width: 100%;
-  height: 200px; /* Altura fija para las imágenes (ajusta según necesites) */
-  object-fit: cover; /* Cubre el contenedor manteniendo la proporción */
-  display: block;
-}
-
-.service-card h3 {
-  color: #333;
-  font-size: 1.8rem;
-  padding: 20px;
-  margin-bottom: 0;
-  font-weight: 500;
-  text-align: center;
+  display: none; /* Ya no estamos usando la imagen directamente aquí */
 }
 
 .more-info-button {
-  background-color: #007bff; /* Un azul moderno */
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  margin-top: auto; /* Empuja el botón hacia la parte inferior */
-  display: block;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-}
-
-.more-info-button:hover {
-  background-color: #0056b3;
-}
-
-/* Media queries para responsividad */
-@media (max-width: 768px) {
-  .services-section {
-      padding: 50px 15px;
-  }
-
-  .services-section h2 {
-      font-size: 2.4rem;
-      margin-bottom: 30px;
-  }
-
-  .services-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
-  }
-
-  .service-card h3 {
-      font-size: 1.6rem;
-      padding: 15px;
-  }
-
-  .more-info-button {
-      font-size: 0.9rem;
-      padding: 10px 20px;
-  }
+  display: none; /* El botón "Leer más" está dentro de ServicioCard */
 }

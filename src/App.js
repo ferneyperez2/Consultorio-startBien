@@ -41,9 +41,11 @@ function App() {
                             <Route path="/" element={<motion.div variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}><Home /></motion.div>} />
                             {/* Services component is now only rendered via a Route */}
                             <Route path="/services" element={<motion.div variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}><Services /></motion.div>} />
+    {/* ... */}
                             <Route path="/contact" element={<motion.div variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}><Contact /></motion.div>} />
                             <Route path="/agendar-cita" element={<motion.div variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}><AgendarCita /></motion.div>} />
                             <Route path="/servicios/:serviceId" element={<motion.div variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}><ServiceDetailPage /></motion.div>} />
+                           
                         </Routes>
                     </div>
                 </div>
@@ -75,6 +77,7 @@ function App() {
                     style={{ width: "50px", height: "50px" }}
                 />
             </a>
+            
         </div>
     );
 }
