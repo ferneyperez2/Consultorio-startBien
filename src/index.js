@@ -21,6 +21,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+
 import { ThemeProvider } from "../src/Component/ThemeContext";  // Asegúrate de importar correctamente el ThemeProvider
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

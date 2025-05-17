@@ -2,6 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Box } from '@mui/material';
 import MedicalServicesIcon from '@mui/icons-material/MedicalServices'; // Un icono de servicio médico
 import { Link as RouterLink } from 'react-router-dom'; // Para navegación interna
+import Services from './Servicio';
 
 function Header() {
     return (
@@ -36,9 +37,9 @@ function Header() {
                     <Button color="inherit" component={RouterLink} to="/para-profesionales">
                         PARA PROFESIONALES
                     </Button>
-                    <Button variant="contained" color="primary" sx={{ fontWeight: 600 }}>
+                    {/* <Button variant="contained" color="primary" sx={{ fontWeight: 600 }}>
                         ACCEDER
-                    </Button>
+                    </Button> */}
                 </Box>
 
                 {/* Posible icono de menú para móvil (opcional) */}
