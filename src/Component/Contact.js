@@ -24,7 +24,7 @@ const Contact = () => {
             <div className="item">
             <FaLocationArrow className="icono" />
               <h3>Dirección</h3>
-              <p>Cl. 13 #3-39, Montelibano, Montelíbano, Córdoba</p>
+              <a href={<MapaConsultorio/>} > Cl. 13 #3-39, Montelibano, Montelíbano, Córdoba</a>
             </div>
 
             <div className="item">
@@ -40,8 +40,8 @@ const Contact = () => {
             <FaPhoneAlt className="icono"/>
            
               <h3>Celular</h3>
-              <p>3122845333
-              </p>
+           <a href="https://wa.me/573122845333">3122845333</a>        
+              
             </div>
 
             <div className="item">
@@ -62,7 +62,7 @@ const Contact = () => {
 
  <div className="mapa">
         <h3>Ubicación</h3>
-        <p>Encuentra la ubicación de nuestro consultorio en el mapa</p>
+        <p> <b>Encuentra la ubicación de nuestro consultorio en el mapa </b></p>
         <div className="mapa-container">
         <MapaConsultorio />
         </div>

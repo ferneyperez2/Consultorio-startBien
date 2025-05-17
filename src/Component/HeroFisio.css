@@ -1,0 +1,96 @@
+.hero-fisio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #e0f7fa; /* El color de fondo */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-fisio__text-container {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-fisio__h1 {
+    font-size: 3.5em;
+    color: #1976d2;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-fisio__p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-fisio__button {
+    background-color: #1976d2;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero-fisio__button:hover {
+    background-color: #115293;
+}
+
+.hero-fisio__image-container {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 8px;
+    overflow: hidden; /* Para que la imagen no se salga del borde */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-fisio__image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos responsivos */
+@media (max-width: 960px) {
+    .hero-fisio {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero-fisio__text-container {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-fisio__h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-fisio__image-container {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-fisio__h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-fisio__p {
+        font-size: 1em;
+    }
+
+    .hero-fisio__button {
+        font-size: 1em;
+        padding: 12px 24px;
+    }
+}

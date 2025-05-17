@@ -1,85 +1,124 @@
 /* Estilos generales */
 .appointment-container {
     max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 30px auto; /* Aumentamos el margen superior para más espacio */
+    padding: 30px; /* Aumentamos el padding interior */
     background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  h2 {
-    margin-bottom: 15px;
-    color: #0077b6;
-    font-size: 22px;
-  }
-  
-  .appointment-form {
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    text-align: left; /* Alineamos el texto a la izquierda para una lectura más fácil */
+    border: 1px solid #e0f7fa; /* Añadimos un borde sutil del color de fondo */
+}
+
+h2 {
+    color: #1976d2; /* Un azul más moderno */
+    font-size: 28px; /* Aumentamos el tamaño del título */
+    margin-bottom: 25px;
+    text-align: center; /* Centramos el título */
+}
+
+.appointment-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-  }
-  
-  .form-group {
+    gap: 20px; /* Aumentamos el espacio entre los elementos del formulario */
+}
+
+.form-group {
     display: flex;
     flex-direction: column;
     text-align: left;
-  }
-  
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  input, select {
+}
+
+label {
+    font-weight: 500; /* Un peso de fuente ligeramente más ligero */
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 16px;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  button {
-    background-color: #0077b6;
-    color: white;
     padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border: 1px solid #b2ebf2; /* Un color más claro para el borde */
+    border-radius: 8px; /* Bordes más redondeados */
     font-size: 16px;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  button:hover {
-    background-color: #005f8a;
-  }
-  
-  /* Mensaje de error */
-  .error-text {
-    color: red;
+    color: #555;
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+}
+
+select {
+    appearance: none; /* Quita las flechas por defecto en algunos navegadores */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="#b2ebf2" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 1em;
+    padding-right: 30px; /* Espacio para la flecha */
+}
+
+button {
+    background-color: #1976d2; /* Un azul más moderno y vibrante */
+    color: white;
+    padding: 14px 20px; /* Aumentamos el padding del botón */
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    cursor: pointer;
+    font-size: 18px; /* Aumentamos el tamaño de la fuente del botón */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #115293; /* Un tono más oscuro al hacer hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mensaje de error */
+.error-text {
+    color: #f44336; /* Un rojo más llamativo para el error */
     font-size: 14px;
-    margin-top: 5px;
-  }
-  
-  /* Responsivo */
-  @media (max-width: 600px) {
+    margin-top: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
     .appointment-container {
-      width: 90%;
-      padding: 15px;
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
     }
-  
+
     h2 {
-      font-size: 20px;
+        font-size: 24px;
+        margin-bottom: 20px;
     }
-  
-    input, select {
-      font-size: 14px;
+
+    label {
+        font-size: 15px;
     }
-  
+
+    input[type="date"],
+    input[type="time"],
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    select {
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
     button {
-      font-size: 14px;
-      padding: 10px;
+        font-size: 16px;
+        padding: 12px 18px;
+        border-radius: 6px;
     }
-  }
-  
+
+    .error-text {
+        font-size: 13px;
+    }
+}

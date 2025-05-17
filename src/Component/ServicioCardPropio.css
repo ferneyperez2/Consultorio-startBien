@@ -1,0 +1,73 @@
+.servicio-card-propio {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+}
+
+.servicio-card-propio__icon-container {
+    background-color: #e0f7fa;
+    color: #00bcd4;
+    border-radius: 4px;
+    padding: 10px;
+    width: fit-content;
+    /* Aumentamos el tamaño del contenedor */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio-card-propio__icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    /* Aumentamos el tamaño de la imagen dentro del contenedor */
+    max-width: 100%; /* Para que no se desborde del contenedor */
+    max-height: 100%;
+}
+
+.servicio-card-propio__icon-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc; /* Un color gris como placeholder */
+    border-radius: 4px;
+}
+
+.servicio-card-propio__title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+}
+
+.servicio-card-propio__description {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.servicio-card-propio__link {
+    color: #1976d2;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9em;
+}
+
+.servicio-card-propio__link:hover {
+    text-decoration: underline;
+}
+
+.servicio-card-propio__arrow {
+    font-size: 1.1em;
+}

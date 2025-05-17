@@ -25,9 +25,9 @@ function HeroSection() {
                     <Button variant="contained" color="primary" size="large" component={RouterLink} to="/agendar-cita">
                         Agendar una Cita
                     </Button>
-                    <Button variant="outlined" color="white" size="large" sx={{ ml: 2 }}>
+                    {/* <Button variant="outlined" color="white" size="large" sx={{ ml: 2 }}>
                         Conocer Nuestros Servicios
-                    </Button>
+                    </Button> */}
                 </Box>
             </Container>
         </Box>

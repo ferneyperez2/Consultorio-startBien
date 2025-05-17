@@ -4,8 +4,11 @@ import Services from "./Servicio";
 import AboutUs from "./AboutUs";
 // import Testimonials from "./Testimonials"; // Si creas un componente de testimonios
 import ContactSection from "./Contact"; // Asegúrate de que este componente esté adaptado o creado
-import Footer from "./Footer";
 import { motion } from "framer-motion";
+import FondoDecorativo from "./FondoDecorativo";
+import BeneficioFisioCard from "./BeneficioFisioCard";
+import BeneficiosFisioterapia from "./BeneficiosFisioterapia";
+import HeroFisio from "./HeroFisio";
 
 const Home = () => {
     const sectionVariants = {
@@ -15,12 +18,15 @@ const Home = () => {
 
     return (
         <motion.div variants={sectionVariants} initial="hidden" animate="visible">
+            <FondoDecorativo/>
             <HeroSection />
+            <HeroFisio/>
             <Services />
             <AboutUs />
+           <BeneficiosFisioterapia/>
             {/* <Testimonials /> */}
-            <ContactSection />
-            <Footer />
+            {/* <ContactSection /> */}
+            
         </motion.div>
     );
 };

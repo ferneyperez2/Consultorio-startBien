@@ -1,12 +1,18 @@
 /* Estilos generales */
-body {
+/* body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f8f9fa;
   color: #333;
   transition: background-color 0.3s ease, color 0.3s ease;
+} */
+ body {
+    margin: 0; /* Asegúrate de que no haya márgenes predeterminados */
+    font-family: 'Roboto', sans-serif; /* O la fuente que estés usando */
+    background-color: #e0f7fa; /* El color que quieres aplicar */
 }
+ 
 
 /* Estilos para el modo claro */
 body {

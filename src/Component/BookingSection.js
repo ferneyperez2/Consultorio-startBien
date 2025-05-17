@@ -106,19 +106,19 @@ const AppointmentForm = () => {
           <label>EPS:</label>
           <select value={Eps} onChange={(e) => setEps(e.target.value)}>
             <option value="">Selecciona Tu Eps</option>
-            <option value="Fonoaudiologia">NUEVA EPS.</option>
-            <option value="Psicologia">SALUD TOTAL.</option>
-            <option value="Terapia Fisica">COOSALUD.</option>
-            <option value="Terapia Respiratoria">CAPITAL SALUD.</option>
-            <option value="M edicina General">CAJACOPI.</option>
-            <option value="Terapia  Ocupacional">WAYU.</option>
-            <option value="Aliansalud">ALIANSALUD.</option>
-            <option value="mutualser">MUTUALSER.</option>
-            <option value="magisterio">MAGISTERIO.</option>
-            <option value="particular">PARTICULAR.</option>
-            <option value="cajacopi">CAJA COPI.</option>
-            <option value="saviasalud">SAVIA SALUD.</option>
-            <option value="sanitas">SANITAS</option>
+            <option value="">NUEVA EPS.</option>
+            <option value="">SALUD TOTAL.</option>
+            <option value="">COOSALUD.</option>
+            <option value="">CAPITAL SALUD.</option>
+            <option value="">CAJACOPI.</option>
+            <option value="">WAYU.</option>
+            <option value="">ALIANSALUD.</option>
+            <option value="">MUTUALSER.</option>
+            <option value="">MAGISTERIO.</option>
+            <option value="">PARTICULAR.</option>
+            <option value="">CAJA COPI.</option>
+            <option value="">SAVIA SALUD.</option>
+            <option value="">SANITAS</option>
           </select>
         </div>
 {/* Regimen */}

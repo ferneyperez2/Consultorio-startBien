@@ -1,0 +1,20 @@
+.beneficios-fisioterapia-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f0f8ff; /* Un fondo muy claro para la sección */
+}
+
+.beneficios-fisioterapia-section h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}

@@ -1,0 +1,42 @@
+.beneficio-fisio-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    border: 1px solid #eee;
+}
+
+.beneficio-fisio-card__icon-container {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0f7fa; /* Un azul claro */
+    color: #00bcd4; /* Un azul más fuerte para el icono */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beneficio-fisio-card__icon {
+    font-size: 1.2em;
+}
+
+.beneficio-fisio-card__title {
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.beneficio-fisio-card__description {
+    font-size: 0.85em;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 0;
+}

@@ -10,7 +10,7 @@ function AboutUs() {
                     Nuestro Enfoque en Fisioterapia
                 </Typography>
                 <Typography variant="body1" paragraph sx={{ lineHeight: 2 }}>
-                    En [Nombre de tu Centro], estamos comprometidos con tu recuperación y bienestar. Nuestro equipo de fisioterapeutas altamente calificados utiliza un enfoque integral y personalizado para tratar una amplia gama de condiciones musculoesqueléticas. Creemos en la importancia de una evaluación exhaustiva, un plan de tratamiento individualizado y un seguimiento continuo para lograr los mejores resultados posibles.
+                    En StartBien, estamos comprometidos con tu recuperación y bienestar. Nuestro equipo de fisioterapeutas altamente calificados utiliza un enfoque integral y personalizado para tratar una amplia gama de condiciones musculoesqueléticas. Creemos en la importancia de una evaluación exhaustiva, un plan de tratamiento individualizado y un seguimiento continuo para lograr los mejores resultados posibles.
                 </Typography>
                 <Grid container spacing={4} justifyContent="center" sx={{ mt: 4 }}>
                     <Grid item xs={12} md={4} sx={{ textAlign: 'center' }}>

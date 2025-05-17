@@ -1,0 +1,52 @@
+.fondo-decorativo {
+    background-color: #e0f7fa; /* Un color azul claro similar al ejemplo */
+    position: relative; /* Para que podamos posicionar los círculos dentro */
+    overflow: hidden; /* Para que los círculos no se salgan del contenedor si los movemos */
+    width: 100%; /* O el ancho que necesites */
+    height: 100%; /* O la altura que necesites */
+}
+
+.circulo {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #b2ebf2; /* Un tono más claro del azul */
+    opacity: 0.7; /* Para dar un efecto sutil */
+}
+
+/* Estilos para diferentes círculos en diferentes posiciones y tamaños */
+.circulo-1 {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    left: 15%;
+}
+
+.circulo-2 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    right: 20%;
+}
+
+.circulo-3 {
+    width: 60px;
+    height: 60px;
+    bottom: 10%;
+    left: 40%;
+}
+
+.circulo-4 {
+    width: 100px;
+    height: 100px;
+    top: 25%;
+    right: 5%;
+}
+
+.circulo-5 {
+    width: 40px;
+    height: 40px;
+    bottom: 30%;
+    right: 60%;
+}
+
+/* Puedes añadir más círculos con diferentes clases y posiciones para variar el efecto */

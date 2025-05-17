@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import './App.css';
 import AppointmentForm from "./Component/BookingSection";
 import ServiceDetailPage from "./Component/ServiceDetailPage";
+import Footer from "./Component/Footer";
 
 function App() {
     const [modoOscuro, setModoOscuro] = useState(
@@ -77,6 +78,7 @@ function App() {
                     style={{ width: "50px", height: "50px" }}
                 />
             </a>
+            <Footer />
             
         </div>
     );
