@@ -12,16 +12,29 @@ import medicinalGeneral from '../Component/img/Medicina General.png';
 import  ortopedia from '../Component/img/ortopedia.png';
 // import terapiaocupacional from '../Component/img/Terapia Ocupacional.png;'
 import terapiarespiratoria from '../Component/img/Terapia Respiratoria.png'
+import LogicaRedMore from "./LogicaRedMore";
 
 
+//     <LogicaRedMore
+//    [   { 
+//     id:"Fonoaudiologia",
+//     name:"Fonoaudiologia",
+//     des:"la fonodiologia se encargar de ciertas partes del",
+    
+// } ],
+    
+//     /> 
+
+    
+     
+    
+    
 const serviciosData = [
-    {
-        id: "fonoaudiologia",
-        name: "Fonoaudiología",
-        iconSrc: fonoaudiologia,
-        desc: "Disciplina encargada de evaluar, diagnosticar...",
-        linkTo: "/servicios/fonoaudiologia",
-    },
+    
+
+
+  
+
     {
         id: "psicologia",
         name: "Psicología",
@@ -58,6 +71,7 @@ const serviciosData = [
     //     linkTo: "/servicios/terapia-ocupacional",
     // },
     {
+        
         id: "ortopedia",
         name: "Ortopedia",
         iconSrc: ortopedia,

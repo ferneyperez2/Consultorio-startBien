@@ -1,19 +1,120 @@
+/* Estilos generales para toda la aplicación */
+
 body {
-  padding: 2rem;
-  background-color: aliceblue;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Asegúrate de tener esta fuente o la que prefieras */
+    background-color: #e0f7fa; /* El color de fondo azul claro */
+    -webkit-font-smoothing: antialiased; /* Mejora el renderizado de fuentes en navegadores webkit */
+    -moz-osx-font-smoothing: grayscale; /* Mejora el renderizado de fuentes en Firefox */
 }
 
-.read-more-less{
-  background-color: #f0f0f0; ;
-  box-shadow: 0 0 1rem rgb( 0, 0,0,.1);
-  padding: 1rem;
-  border-radius: .5rem;
+/* Si tienes un contenedor principal en App.js */
+.app-container {
+    /* Puedes añadir estilos generales al contenedor si es necesario */
+    /* Por ejemplo, para centrar contenido o establecer un ancho máximo */
+    /* max-width: 1440px;
+    margin: 0 auto; */
 }
 
-.btn{
-  background-color:  transparent;
-  border: none  ;
-  font-weight: 500;
-  color: blue;
-  cursor: pointer;
+/* Estilos para encabezados (h1, h2, h3, etc.) */
+h1, h2, h3, h4, h5, h6 {
+    color: #333; /* Color de texto general para encabezados */
+    margin-top: 0; /* Elimina el margen superior predeterminado */
+    line-height: 1.2;
 }
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* Estilos para párrafos (p) */
+p {
+    color: #555; /* Color de texto general para párrafos */
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Estilos para enlaces (a) */
+a {
+    color: #1976d2; /* Color de enlace predeterminado */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    transition: color 0.3s ease-in-out; /* Transición suave para el color al hacer hover */
+}
+
+a:hover {
+    color: #0b4885; /* Color del enlace al hacer hover */
+    text-decoration: underline; /* Añade un subrayado al hacer hover para indicar interactividad */
+}
+
+/* Estilos para listas (ul, ol, li) */
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Puedes añadir más estilos generales para otros elementos como botones, formularios, etc. */
+/* Asegúrate de que estos estilos no entren en conflicto con los estilos específicos de tus componentes */
+
+/* Ejemplo para un botón general (puedes tener botones con clases específicas en tus componentes) */
+/* button {
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0b4885;
+} */
+
+/* Estilos para contenedores de secciones (puedes usar clases como .section) */
+/* .section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+} */
+
+/* Estilos para diseño de grid (si utilizas CSS Grid de forma general) */
+/* .grid-container {
+    display: grid;
+    gap: 20px;
+} */
+
+/* Estilos para diseño flexbox (si utilizas Flexbox de forma general) */
+/* .flex-container {
+    display: flex;
+    align-items: center;
+} */
+
+/* Media queries para diseño responsivo (ejemplos) */
+/* @media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .section {
+        padding: 40px 15px;
+    }
+} */
