@@ -5,36 +5,21 @@ import { Link } from "react-router-dom";
 import ServicioCardPropio from "./ServicioCardPropio"; // Importa nuestro nuevo componente
 
 // Importa tus imágenes (asegúrate de que las rutas sean correctas, relativas a 'public/')
-import fonoaudiologia from '../Component/img/Fonoaudiología.png';
-import psicologia from '../Component/img/Psicología.png';
-import terepeafisica from '../Component/img/Terapia Física.png';
-import medicinalGeneral from '../Component/img/Medicina General.png';
-import  ortopedia from '../Component/img/ortopedia.png';
-// import terapiaocupacional from '../Component/img/Terapia Ocupacional.png;'
-import terapiarespiratoria from '../Component/img/Terapia Respiratoria.png'
-import LogicaRedMore from "./LogicaRedMore";
-
-
-//     <LogicaRedMore
-//    [   { 
-//     id:"Fonoaudiologia",
-//     name:"Fonoaudiologia",
-//     des:"la fonodiologia se encargar de ciertas partes del",
-    
-// } ],
-    
-//     /> 
-
-    
-     
-    
-    
+import fonoaudiologia from './img/Fonoaudiología.png'
+import  psicologia from './img/Psicología.png'
+import terapiafisica from './img/Terapia Física.png'
+import terapiaRespiratoria from './img/Terapia Respiratoria.png';
+import medicinaGeneral from './img/Medicina General.png';
+import terapiaOcupacional from './img/Terapia Ocupacional.png';
+import ortopedia from './img/ortopedia.png';
 const serviciosData = [
-    
-
-
-  
-
+    {
+        id: "fonoaudiologia",
+        name: "Fonoaudiología",
+        iconSrc: fonoaudiologia,
+        desc: "Disciplina encargada de evaluar, diagnosticar...",
+        linkTo: "/servicios/fonoaudiologia",
+    },
     {
         id: "psicologia",
         name: "Psicología",
@@ -45,33 +30,32 @@ const serviciosData = [
     {
         id: "terapia-fisica",
         name: "Terapia Física",
-        iconSrc: terepeafisica,
+        iconSrc: terapiafisica,
         desc: "La Terapia Física busca prevenir, mejorar...",
         linkTo: "/servicios/terapia-fisica",
     },
     {
         id: "terapia-respiratoria",
         name: "Terapia Respiratoria",
-        iconSrc: terapiarespiratoria,
+       iconSrc: terapiaRespiratoria,
         desc: "La terapia respiratoria es un conjunto de técnicas...",
         linkTo: "/servicios/terapia-respiratoria",
     },
     {
         id: "medicina-general",
         name: "Medicina General",
-        iconSrc: medicinalGeneral,
+        iconSrc: medicinaGeneral,
         desc: "La medicina general es una especialidad médica...",
         linkTo: "/servicios/medicina-general",
     },
-    // {
-    //     id: "terapia-ocupacional",
-    //     name: "Terapia Ocupacional",
-    //     iconSrc: terapiaocupacional,
-    //     desc: "La terapia ocupacional es un tratamiento que ayuda...",
-    //     linkTo: "/servicios/terapia-ocupacional",
-    // },
     {
-        
+        id: "terapia-ocupacional",
+        name: "Terapia Ocupacional",
+        iconSrc: terapiaOcupacional,
+        desc: "La terapia ocupacional es un tratamiento que ayuda...",
+        linkTo: "/servicios/terapia-ocupacional",
+    },
+    {
         id: "ortopedia",
         name: "Ortopedia",
         iconSrc: ortopedia,

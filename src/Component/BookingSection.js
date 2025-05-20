@@ -102,27 +102,27 @@ const AppointmentForm = () => {
 
         {/* Eps */}
 
-        <div className="form-group">
+        <div className="form">
           <label>EPS:</label>
           <select value={Eps} onChange={(e) => setEps(e.target.value)}>
             <option value="">Selecciona Tu Eps</option>
-            <option value="">NUEVA EPS.</option>
-            <option value="">SALUD TOTAL.</option>
-            <option value="">COOSALUD.</option>
-            <option value="">CAPITAL SALUD.</option>
-            <option value="">CAJACOPI.</option>
-            <option value="">WAYU.</option>
-            <option value="">ALIANSALUD.</option>
-            <option value="">MUTUALSER.</option>
-            <option value="">MAGISTERIO.</option>
-            <option value="">PARTICULAR.</option>
-            <option value="">CAJA COPI.</option>
-            <option value="">SAVIA SALUD.</option>
-            <option value="">SANITAS</option>
+            <option value="nueva eps">NUEVA EPS.</option>
+            <option value="Salud total">SALUD TOTAL.</option>
+            <option value="coosalud">COOSALUD.</option>
+            <option value="capital salud">CAPITAL SALUD.</option>
+            <option value="caja copi">CAJACOPI.</option>
+            <option value="wayu">WAYU.</option>
+            <option value="aliansalud">ALIANSALUD.</option>
+            <option value="mutualser">MUTUALSER.</option>
+            <option value="magisterio">MAGISTERIO.</option>
+            <option value="particular">PARTICULAR.</option>
+            <option value="caja copi">CAJA COPI.</option>
+            <option value="savia saluug">SAVIA SALUD.</option>
+            <option value="sanitas">SANITAS</option>
           </select>
         </div>
 {/* Regimen */}
-        <div className="form-group">
+        <div className="form-groupa">
           <label>Regimen:</label>
           <select value={Regimen} onChange={(e) => setRegimen(e.target.value)}>
             <option value="">Selecciona Tu Regimen</option>
