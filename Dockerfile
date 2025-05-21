@@ -7,7 +7,7 @@ WORKDIR /app
 # Copia package.json y package-lock.json antes de instalar dependencias
 COPY package.json package-lock.json ./
 
-
+ 
 RUN npm install
 
 # Copia todo el código fuente al contenedor
