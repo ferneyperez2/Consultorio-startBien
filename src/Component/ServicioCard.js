@@ -3,6 +3,7 @@ import { Box, Typography, Button, IconButton } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'; // Icono de flecha
 import { Link as RouterLink } from 'react-router-dom';
 
+
 function ServicioCard({ icon, title, description, linkTo }) {
     return (
         <Box
@@ -52,6 +53,7 @@ function ServicioCard({ icon, title, description, linkTo }) {
                     },
                     padding: 0,
                     justifyContent: 'flex-start',
+                    
                 }}
                 endIcon={<ArrowForwardIosIcon sx={{ fontSize: 'small' }} />}
             >

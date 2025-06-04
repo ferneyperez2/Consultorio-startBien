@@ -5,6 +5,9 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@mui/icons-material": "^7.1.0",
     "@mui/material": "^7.1.0",
     "@react-google-maps/api": "^2.20.6",
@@ -53,7 +56,10 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
     "eslint": "^8.57.1",
-    "eslint-config-react-app": "^7.0.1"
+    "eslint-config-react-app": "^7.0.1",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8"
   }
 }

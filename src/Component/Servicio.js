@@ -60,8 +60,9 @@ const serviciosData = [
         id: "ortopedia",
         name: "Ortopedia",
         iconSrc: ortopedia,
-        desc: "La ortopedia es la especialidad médica que se enfoca en el diagnóstico, tratamiento, prevención y rehabilitación de las enfermedades y lesiones del sistema musculoesquelético, que incluye huesos, articulaciones, músculos, ligamentos y tendones.",
+        desc: " La ortopedia es la especialidad médica que se enfoca en el diagnóstico, tratamiento, prevención y rehabilitación de las enfermedades y lesiones del sistema musculoesquelético, que incluye huesos, articulaciones, músculos, ligamentos y tendones. Los ortopedistas utilizan una variedad de técnicas, desde tratamientos conservadores como fisioterapia y medicamentos hasta cirugías para corregir deformidades o reparar lesiones.",
         linkTo: "/servicios/ortopedia",
+        imageSrc: ortopedia,
     },
 ];
 

@@ -8,8 +8,10 @@ import { motion } from "framer-motion";
 import FondoDecorativo from "./FondoDecorativo";
 import BeneficioFisioCard from "./BeneficioFisioCard";
 import BeneficiosFisioterapia from "./BeneficiosFisioterapia";
-import HeroFisio from "./HeroFisio";
-
+import  PhysicalResource from '../ServiceConcepto/PsychologySection'
+// import PhysicalResources from "../ServiceConcepto/PsychologySection";
+// import FisioterapiaRecursos from "../FisioterapiaRecursos";
+import Fonoaudiologia from "../ServiceConcepto/Fonoaudiologia";
 const Home = () => {
     const sectionVariants = {
         hidden: { opacity: 0, y: 50 },
@@ -20,10 +22,14 @@ const Home = () => {
         <motion.div variants={sectionVariants} initial="hidden" animate="visible">
             <FondoDecorativo/>
             <HeroSection />
-            <HeroFisio/>
+            {/* <HeroFisio/> */}
             <Services />
+            <Fonoaudiologia/>
+            {/* <PsychologySection /> */}
             <AboutUs />
            <BeneficiosFisioterapia/>
+           <PhysicalResource/>
+
             {/* <Testimonials /> */}
             {/* <ContactSection /> */}
             
