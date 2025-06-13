@@ -1,6 +1,10 @@
         // src/component/EquipoPreview.js
         import React from "react";
         import { useNavigate } from "react-router-dom";
+        import Doctor1 from "../Component/img/Doctor2.jpg";
+import Doctor2 from "../Component/img/Doctor.jpg";
+import Doctor3 from "../Component/img/Doctora.jpg";
+
 
         import "./EquipoPreview.css";
 
@@ -11,23 +15,24 @@
             navigate("/nuestro-equipo");
         };
 
-        const equipo = [
-            {
-            nombre: "Dra. Fredy anaya",
-            especialidad: "Rehabilitación oral, Odontología general",
-            imagen: '../Component/img/Doctor2.jpg', 
-            },
-            {
-            nombre: "Dr. Juan Cabezas",
-            especialidad: "Cirugía, Odontología general",
-            imagen: '../Component/img/Doctor.jpg',
-            },
-            {
-            nombre: "Dra. Sofía Köstner",
-            especialidad: "Ortodoncia, Odontología general",
-            imagen: '../Component/img/Doctora.jpg',
-            },
-        ];
+  const equipo = [
+  {
+    nombre: "Dra. Fredy Anaya",
+    especialidad: "Rehabilitación oral, Odontología general",
+    imagen: Doctor1,
+  },
+  {
+    nombre: "Dr. Juan Cabezas",
+    especialidad: "Cirugía, Odontología general",
+    imagen: Doctor2,
+  },
+  {
+    nombre: "Dra. Sofía Köstner",
+    especialidad: "Ortodoncia, Odontología general",
+    imagen: Doctor3,
+  },
+];
+
 
         return (
             <div className="equipo-preview">

@@ -63,3 +63,83 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+/* nuevo  */
+
+.nuestro-equipo {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.nuestro-equipo .encabezado h2 {
+  color: #0097c2;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.nuestro-equipo .encabezado p {
+  font-size: 16px;
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.grid-equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.card-equipo {
+  background-color: #e8fcff;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 240px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card-equipo:hover {
+  transform: translateY(-5px);
+}
+
+.card-equipo img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-equipo .info {
+  margin-top: 10px;
+}
+
+.card-equipo h4 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #006494;
+}
+
+.card-equipo p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.btn-leer-mas {
+  background-color: #0097c2;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-leer-mas:hover {
+  background-color: #007ba4;
+}

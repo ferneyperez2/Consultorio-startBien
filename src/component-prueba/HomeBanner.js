@@ -35,9 +35,9 @@
             </div>
         </Carousel>
 
-        <div className="overlay-text">
+        {/* <div className="overlay-text">
             <h2>Nos preocupamos <br /> de tu salud integral</h2>
-        </div>
+        </div> */}
 
             {/* INFORMACIÓN */}
         <div className="info-section">
