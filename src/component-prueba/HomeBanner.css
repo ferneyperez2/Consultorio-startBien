@@ -1,192 +1,155 @@
-/* src/components/HomeBanner.css */
-
 .banner-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .carousel-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-    filter: brightness(97%) contrast(105%) saturate(110%);
-    image-rendering: crisp-edges;
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  filter: brightness(97%) contrast(105%) saturate(110%);
+  transition: transform 0.3s ease;
 }
 
 .carousel-image img:hover {
-    /* este es el tiempo en el que van a cambiar las imagenes  */
-    transform: scale(0.1);
-}
-
-img {
-    image-rendering: optimizeQuality;
-    transition: transform 0.1s ease-in-out;
-}
-
-.overlay-text {
-    position: absolute;
-    top: 15%; /* Ajustado para estar más arriba */
-    left: 10%;
-    color: white;
-    z-index: 2;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
-}
-
-.overlay-text h2 {
-    font-size: 2.2rem;
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    .overlay-text {
-        top: 10%; /* Ajustado para estar más arriba en móviles */
-        left: 5%;
-        width: 90%;
-        text-align: center;
-    }
-
-    .overlay-text h2 {
-        font-size: 1.4rem;
-    }
+  transform: scale(1.03);
 }
 
 .info-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background: #64d0ec; /* Color de fondo azul claro */
-    padding: 25px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #64d0ec;
+  padding: 25px 10px;
+  gap: 20px;
 }
 
 .info-box {
-    background-color: #43c0dd; /* Color de fondo azul un poco más oscuro */
-    color: white;
-    padding: 20px;
-    margin: 10px;
-    width: 280px;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    text-align: left;
+  background-color: #43c0dd;
+  color: white;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .info-box h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
-    .info-box {
-        width: 90%; /* Ancho completo en móviles */
-    }
+  .info-box {
+    width: 90%;
+  }
 }
 
-/* Estilos para la sección "Why Choose Us" (Por qué elegirnos) */
 .why-choose-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; /* Espacio entre los elementos */
-    background-color: #e5fcff; /* Fondo muy claro, casi blanco-azulado */
-    padding: 40px 20px;
-    gap: 20px; /* Espacio entre el texto y la imagen */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e5fcff;
+  padding: 40px 20px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .why-choose-text {
-    flex: 1;
-    max-width: 600px;
-    padding: 20px;
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
 }
 
 .why-choose-text h2 {
-    color: #217dbb; /* Azul oscuro para el título */
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-weight: bold;
+  color: #217dbb;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .why-choose-text span {
-    font-style: italic; /* Texto en cursiva para el span */
+  font-style: italic;
 }
 
 .why-choose-text p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #333; /* Color de texto estándar */
-    margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .why-choose-text button {
-    background-color: #217dbb; /* Azul oscuro para el botón */
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 25px; /* Bordes redondeados para el botón */
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición suave al hover */
+  background-color: #217dbb;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .why-choose-text button:hover {
-    background-color: #1a629b; /* Azul un poco más oscuro al pasar el ratón */
+  background-color: #1a629b;
 }
 
 .why-choose-img {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    max-width: 600px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
 }
 
 .why-choose-img img {
-    width: 100%;
-    height: auto;
-    max-height: 350px; /* Altura máxima para la imagen */
-    object-fit: contain; /* Ajusta la imagen dentro de su contenedor */
-    border-radius: 12px; /* Bordes redondeados para la imagen */
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
-/* Media Queries para la sección why-choose-section */
+/* Responsive */
 @media (max-width: 992px) {
-    .why-choose-section {
-        flex-direction: column; /* Apila los elementos en pantallas medianas */
-        text-align: center;
-        padding: 30px 15px;
-    }
+  .why-choose-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 15px;
+  }
 
-    .why-choose-text,
-    .why-choose-img {
-        max-width: 100%; /* Ocupa todo el ancho disponible */
-        padding: 0;
-    }
+  .why-choose-text,
+  .why-choose-img {
+    max-width: 100%;
+    padding: 0;
+  }
 
-    .why-choose-text h2 {
-        font-size: 24px;
-    }
+  .why-choose-text h2 {
+    font-size: 24px;
+  }
 
-    .why-choose-text p {
-        font-size: 14px;
-    }
+  .why-choose-text p {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 576px) {
-    .why-choose-text h2 {
-        font-size: 20px;
-    }
+  .why-choose-text h2 {
+    font-size: 20px;
+  }
 
-    .why-choose-text p {
-        font-size: 13px;
-    }
+  .why-choose-text p {
+    font-size: 13px;
+  }
 
-    .why-choose-text button {
-        padding: 10px 15px;
-        font-size: 0.9em;
-    }
+  .why-choose-text button {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
 
-    .why-choose-img img {
-        max-height: 250px; /* Reduce la altura en móviles */
-    }
+  .why-choose-img img {
+    max-height: 250px;
+  }
 }
