@@ -185,7 +185,7 @@ import Contact from "./Component/Contact";
 
                 {/* Botón flotante de WhatsApp */}
                 <a
-                    href="https://wa.me/573001112233?text=Hola,%20quiero%20agendar%20una%20cita%20con%20StartBien"
+                    href="https://wa.me/573122845333?text=Hola,%20quiero%20agendar%20una%20cita%20con%20StartBien"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="whatsapp-button"

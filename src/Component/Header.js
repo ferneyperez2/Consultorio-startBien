@@ -1,30 +1,37 @@
-// src/components/Header.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import Logo from '../Component/img/image.png'; // Usa import para la imagen
+import Logo from '../Component/img/image.png';
 
 function Header() {
+   const [menuOpen, setMenuOpen] = useState(false);
+
+  // const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <header className="header">
-      {/* Top bar */}
       <div className="top-bar">
         <div className="top-buttons">
           <button className="btn">StarBien</button>
         </div>
       </div>
 
-      {/* Barra de navegación */}
       <nav className="navbar">
         <div className="logo">
           <img src={Logo} alt="StarBien" />
         </div>
 
-        <ul className="nav-links">
-          <li><Link to="/">INICIO</Link></li>
-          <li><Link to="/nuestro-equipo">NUESTRO EQUIPO</Link></li>
-          <li><Link to="/especialidades">ESPECIALIDADES</Link></li>
-          <li><Link to="/Contact">CONTACTO</Link></li>
+        {/* <div className="hamburger" onClick={toggleMenu}>
+          <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
+          <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
+          <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
+        </div> */}
+
+        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>INICIO</Link></li>
+          <li><Link to="/nuestro-equipo" onClick={() => setMenuOpen(false)}>NUESTRO EQUIPO</Link></li>
+          <li><Link to="/especialidades" onClick={() => setMenuOpen(false)}>ESPECIALIDADES</Link></li>
+          <li><Link to="/Contact" onClick={() => setMenuOpen(false)}>CONTACTO</Link></li>
         </ul>
       </nav>
     </header>
