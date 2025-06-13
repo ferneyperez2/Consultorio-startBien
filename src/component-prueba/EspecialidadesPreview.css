@@ -1,0 +1,59 @@
+.especialidades-preview {
+  background: linear-gradient(to right, #2176ae, #a1f0f0);
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+}
+
+.intro-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.intro-text p {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.btn-saber-mas {
+  background-color: white;
+  color: #2176ae;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.iconos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.icono-especialidad {
+  background: white;
+  color: #2176ae;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  width: 140px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.icono-especialidad:hover {
+  transform: scale(1.05);
+}
+
+.icono {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.nombre {
+  font-size: 14px;
+  font-weight: bold;
+}

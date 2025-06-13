@@ -1,11 +1,13 @@
 import React from 'react';
 import { Box, Typography, Container, Link } from '@mui/material';
+import Logo from '../Component/img/image.png';
 
 function Footer() {
     return (
         <Box sx={{ bgcolor: '#f2f2f2', py: 4, textAlign: 'center', mt: 6 }}>
             <Container maxWidth="md">
                 <Typography variant="body2" color="text.secondary" align="center" gutterBottom>
+                    {/* <img alt="Logo"src={Logo} /> */}
                     © {new Date().getFullYear()} <b>StartBien</b> Todos los derechos reservados.
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
