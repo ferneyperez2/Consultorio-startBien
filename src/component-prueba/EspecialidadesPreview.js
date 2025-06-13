@@ -24,7 +24,7 @@ const EspecialidadesPreview = () => {
   return (
     <div className="especialidades-preview">
       <div className="intro-text">
-        <h2>Otras especialidades</h2>
+        <h2>  Nuestras  especialidades</h2>
         <p>
           Contamos con profesionales del área de medicina general y terapias especializadas para abordar la totalidad de los problemas que afectan al paciente.
         </p>
