@@ -1,9 +1,8 @@
 import React from "react";
 import './Servicio.css';
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import ServicioCardConLeerMas from "./ServicioCardConLeerMas"; // Importa el nuevo componente
-
+// import { Link } from "react-router-dom";
+import ServicioCardConLeerMas from "./ServicioCardConLeerMas"; 
 // Importa tus imágenes
 import fonoaudiologia from './img/Fonoaudiología.png';
 import  psicologia from './img/Psicología.png';

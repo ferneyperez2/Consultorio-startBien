@@ -6,7 +6,7 @@ import Header from "./Component/Header";
 import Sidebar from "./Component/Sidebar";
 import Services from "./Component/Servicio";
 import Contact from "./Component/Contact";
-import AgendarCita from "./Component/BookingSection";
+// import AgendarCita from "./Component/BookingSection";
 import Footer from "./Component/Footer";
 import HomeBanner from "./component-prueba/HomeBanner";
 import EspecialidadesPreview from "./component-prueba/EspecialidadesPreview";
@@ -14,11 +14,11 @@ import  AppointmentForm from './Component/BookingSection';
 
 //  los componentes de cada especialidad
 import MedicinaGeneral from "./component-prueba/Servicio/MedicinaGeneral";
-import Ortopedia from "./component-prueba/Servicio/Ortopedia";
+// import Ortopedia from "./component-prueba/Servicio/Ortopedia";
 import Fonoaudiologia from "./component-prueba/Servicio/Fonoaudiologia";
 import Psicologia from "./component-prueba/Servicio/Psicologia";
 import TerapiaFisica from "./component-prueba/Servicio/TerapiaFisica";
-import TerapiaOcupacional from "./component-prueba/Servicio/TerapiaOcupacional";
+// import TerapiaOcupacional from "./component-prueba/Servicio/TerapiaOcupacional";
 import TerapiaRespiratoria from "./component-prueba/Servicio/TerapiaRespiratoria";
 import Nutricion from "./component-prueba/Servicio/Nutricion";
 import EsteticaFacial from "./component-prueba/Servicio/EsteticaFacial";

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa"; // Íconos de hamburguesa y cerrar
+// import { FaBars, FaTimes } from "react-icons/fa"; // Íconos de hamburguesa y cerrar
 import "./Sidebar.css"; // Importamos los estilos
 
 const Sidebar = () => {

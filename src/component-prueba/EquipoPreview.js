@@ -1,12 +1,10 @@
         // src/component/EquipoPreview.js
-        import React from "react";
-        import { useNavigate } from "react-router-dom";
-        import Doctor1 from "../Component/img/Doctor2.jpg";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+   import Doctor1 from "../Component/img/Doctor2.jpg";
 import Doctor2 from "../Component/img/Doctor.jpg";
 import Doctor3 from "../Component/img/Doctora.jpg";
-
-
-        import "./EquipoPreview.css";
+import "./EquipoPreview.css";
 
         const EquipoPreview = () => {
         const navigate = useNavigate();

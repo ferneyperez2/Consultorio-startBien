@@ -13,7 +13,7 @@ import medicinageneral from '../Component/img/Medicina General.png';
 import Logo from '../Component/img/logo.jpeg';
 import Pscologia from '../Component/img/Psicología.png';
 import clinicaAldanaBanner from '../Component/img/Medicina General.png';
-import AppointmentForm from '../Component/BookingSection';
+// import AppointmentForm from '../Component/BookingSection';
 
 const fadeIn = (delay = 0) => ({
   hidden: { opacity: 0, y: 40 },
