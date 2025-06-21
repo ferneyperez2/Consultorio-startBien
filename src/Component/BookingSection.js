@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaUser, FaPhone, FaIdCard, FaCalendarAlt, FaClock, FaWhatsapp, FaHospital, FaListAlt } from "react-icons/fa";
+import { FaUser, FaPhone, FaIdCard, FaCalendarAlt,  FaWhatsapp, FaHospital, FaListAlt } from "react-icons/fa";
 import "./appointment.css";
 
 const AppointmentForm = () => {
   const [service, setService] = useState(localStorage.getItem("service") || "");
   const [date, setDate] = useState(localStorage.getItem("date") || "");
-  const [time, setTime] = useState(localStorage.getItem("time") || "");
+  // const [time, setTime] = useState(localStorage.getItem("time") || "");
   const [name, setName] = useState(localStorage.getItem("name") || "");
   const [phone, setPhone] = useState(localStorage.getItem("phone") || "");
   const [identi, setIdenti] = useState(localStorage.getItem("identi") || "");
@@ -17,13 +17,13 @@ const AppointmentForm = () => {
   useEffect(() => {
     localStorage.setItem("service", service);
     localStorage.setItem("date", date);
-    localStorage.setItem("time", time);
+    // localStorage.setItem("time", time);
     localStorage.setItem("name", name);
     localStorage.setItem("phone", phone);
     localStorage.setItem("identi", identi);
     localStorage.setItem("Eps", Eps);
     localStorage.setItem("Regimen", Regimen);
-  }, [service, date, time, name, phone, identi, Eps, Regimen]);
+  }, [service, date, name, phone, identi, Eps, Regimen]);
 
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
@@ -38,7 +38,7 @@ const AppointmentForm = () => {
   };
 
   const handleWhatsApp = () => {
-    if (!service || !date || !time || !name || !phone || !identi || !Eps || !Regimen) {
+    if (!service || !date  || !name || !phone || !identi || !Eps || !Regimen) {
       setError("Por favor completa todos los campos.");
       return;
     } else {
@@ -49,7 +49,7 @@ const AppointmentForm = () => {
     mi eps es: ${Eps}, 
     mi regimen es: ${Regimen},
     con la Especialidad ${service},
-    el dia ${date} a las ${time},
+    el dia ${date} ,
     mi número es ${phone}.`;
     const whatsappURL = `https://wa.me/573122845333?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");

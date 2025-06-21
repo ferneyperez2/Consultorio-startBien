@@ -2,8 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import {
   FaStethoscope,
-  FaBone,
-  FaBrain,
+FaBrain,
   FaRunning,
   FaWind,
   FaHands,
