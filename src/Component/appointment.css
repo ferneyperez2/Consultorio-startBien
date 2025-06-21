@@ -1,39 +1,52 @@
-/* Estilos generales */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
 .appointment-container {
     max-width: 500px;
-    margin: 30px auto; /* Aumentamos el margen superior para más espacio */
-    padding: 30px; /* Aumentamos el padding interior */
+    margin: 30px auto;
+    padding: 30px;
     background: #ffffff;
-    border-radius: 12px; /* Bordes más redondeados */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
-    text-align: left; /* Alineamos el texto a la izquierda para una lectura más fácil */
-    border: 1px solid #e0f7fa; /* Añadimos un borde sutil del color de fondo */
+    border-radius: 18px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.13);
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    text-align: left;
+    border: 1px solid #e0f7fa;
+    transition: box-shadow 0.3s;
+}
+
+.appointment-container:hover {
+    box-shadow: 0px 12px 32px rgba(25, 118, 210, 0.13);
 }
 
 h2 {
-    color: #1976d2; /* Un azul más moderno */
-    font-size: 28px; /* Aumentamos el tamaño del título */
+    color: #1976d2;
+    font-size: 2rem;
     margin-bottom: 25px;
-    text-align: center; /* Centramos el título */
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .appointment-form {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Aumentamos el espacio entre los elementos del formulario */
+    gap: 18px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     text-align: left;
+    position: relative;
 }
 
 label {
-    font-weight: 500; /* Un peso de fuente ligeramente más ligero */
-    margin-bottom: 8px;
+    font-weight: 600;
+    margin-bottom: 7px;
     color: #333;
-    font-size: 16px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 input[type="date"],
@@ -43,82 +56,85 @@ input[type="number"],
 input[type="tel"],
 select {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #b2ebf2; /* Un color más claro para el borde */
-    border-radius: 8px; /* Bordes más redondeados */
-    font-size: 16px;
+    padding: 12px 14px;
+    border: 1.5px solid #b2ebf2;
+    border-radius: 8px;
+    font-size: 1rem;
     color: #555;
-    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+    background: #f7fafc;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px #e3f2fd;
 }
 
 select {
-    appearance: none; /* Quita las flechas por defecto en algunos navegadores */
+    appearance: none;
     background-image: url('data:image/svg+xml;utf8,<svg fill="#b2ebf2" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
     background-repeat: no-repeat;
     background-position: right 12px center;
     background-size: 1em;
-    padding-right: 30px; /* Espacio para la flecha */
+    padding-right: 36px;
 }
 
 button {
-    background-color: #1976d2; /* Un azul más moderno y vibrante */
+    background-color: #1976d2;
     color: white;
-    padding: 14px 20px; /* Aumentamos el padding del botón */
+    padding: 14px 20px;
     border: none;
-    border-radius: 8px; /* Bordes más redondeados */
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 18px; /* Aumentamos el tamaño de la fuente del botón */
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.15rem;
+    font-weight: 700;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 2px 8px rgba(25, 118, 210, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 button:hover {
-    background-color: #115293; /* Un tono más oscuro al hacer hover */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #115293;
+    box-shadow: 0px 4px 16px rgba(25, 118, 210, 0.16);
 }
 
-/* Mensaje de error */
 .error-text {
-    color: #f44336; /* Un rojo más llamativo para el error */
-    font-size: 14px;
+    color: #f44336;
+    font-size: 0.95rem;
     margin-top: 8px;
+    text-align: center;
 }
 
-/* Responsivo */
 @media (max-width: 600px) {
     .appointment-container {
-        width: 95%;
-        padding: 20px;
-        margin: 20px auto;
+        width: 97%;
+        padding: 16px;
+        margin: 16px auto;
     }
-
     h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
+        font-size: 1.3rem;
+        margin-bottom: 18px;
     }
-
     label {
-        font-size: 15px;
+        font-size: 0.98rem;
     }
-
-    input[type="date"],
-    input[type="time"],
-    input[type="text"],
-    input[type="number"],
-    input[type="tel"],
+    input,
     select {
-        font-size: 15px;
-        padding: 10px;
+        font-size: 0.98rem;
+        padding: 10px 10px;
         border-radius: 6px;
     }
-
     button {
-        font-size: 16px;
-        padding: 12px 18px;
+        font-size: 1rem;
+        padding: 12px 10px;
         border-radius: 6px;
     }
-
     .error-text {
-        font-size: 13px;
+        font-size: 0.9rem;
     }
 }

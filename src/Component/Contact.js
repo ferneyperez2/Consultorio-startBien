@@ -1,11 +1,61 @@
 import React, { useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaLocationArrow } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
-import { CgMail } from "react-icons/cg";
-import { AiFillSchedule } from "react-icons/ai";
+import { motion } from "framer-motion";
+import { FaWhatsapp, FaLocationArrow, FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
 import MapaConsultorio from "./Mapa";
 import "./Contact.css";
+
+const infoItems = [
+  {
+    icon: <FaLocationArrow className="icono location" />,
+    title: "Dirección",
+    content: (
+      <a
+        href="https://www.google.com/maps/place/Cl.+13+%233-39,+Montelíbano,+Córdoba"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Cl. 13 #3-39, Montelibano, Montelíbano, Córdoba
+      </a>
+    ),
+  },
+  {
+    icon: <FaWhatsapp className="icono whatsapp" />,
+    title: "Whatsapp",
+    content: (
+      <a href="https://wa.me/573122845333" target="_blank" rel="noopener noreferrer">
+        +57 3122845333
+      </a>
+    ),
+  },
+  {
+    icon: <FaPhoneAlt className="icono phone" />,
+    title: "Celular",
+    content: (
+      <a href="tel:3122845333">
+        3122845333
+      </a>
+    ),
+  },
+  {
+    icon: <FaEnvelope className="icono mail" />,
+    title: "Correo Electrónico",
+    content: (
+      <a href="mailto:bibianaester@gmail.com">
+        bibianaester@gmail.com
+      </a>
+    ),
+  },
+  {
+    icon: <FaClock className="icono clock" />,
+    title: "Horario",
+    content: (
+      <>
+        <p>Lunes a Viernes</p>
+        <p>07:00 AM – 5:00 PM</p>
+      </>
+    ),
+  },
+];
 
 const Contact = () => {
   const [mostrarInfo, setMostrarInfo] = useState(true);
@@ -13,68 +63,52 @@ const Contact = () => {
   return (
     <div className="contacto-container">
       <h2 className="titulo">Contacto</h2>
-
-      <button className="toggle-boton" onClick={() => setMostrarInfo(!mostrarInfo)}>
-        {mostrarInfo ? "Ocultar Información" : "Mostrar Información"}
-      </button>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <button className="toggle-boton" onClick={() => setMostrarInfo(!mostrarInfo)}>
+          {mostrarInfo ? "Ocultar Información" : "Mostrar Información"}
+        </button>
+      </div>
 
       {mostrarInfo && (
         <div className="contacto-grid">
-          <div className="info">
-            <div className="item">
-            <FaLocationArrow className="icono" />
-              <h3>Dirección</h3>
-              <a href={<MapaConsultorio/>} > Cl. 13 #3-39, Montelibano, Montelíbano, Córdoba</a>
+          <motion.div
+            className="info"
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            {infoItems.map((item, idx) => (
+              <motion.div
+                className="item"
+                key={idx}
+                whileHover={{ scale: 1.03, boxShadow: "0 6px 24px rgba(25,118,210,0.10)" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                {item.icon}
+                <h3>{item.title}</h3>
+                <div>{item.content}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            className="mapa"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <h3>Ubicación</h3>
+            <p>
+              <b>Encuentra la ubicación de nuestro consultorio en el mapa</b>
+            </p>
+            <div className="mapa-container">
+              <MapaConsultorio />
             </div>
-
-            <div className="item">
-                      <FaWhatsapp className="icono"/>           
-                         <h3>Whatsapp</h3>
-              <a href="https://wa.me/573122845333" target="_blank" rel="noopener noreferrer">
-                +57 3122845333
-
-              </a>
-            </div>
-
-            <div className="item">
-            <FaPhoneAlt className="icono"/>
-           
-              <h3>Celular</h3>
-           <a href="https://wa.me/573122845333">3122845333</a>        
-              
-            </div>
-
-            <div className="item">
-            <CgMail className="icono" />
-              
-              <h3>Correo Electrónico</h3>
-              <a href="bibianaester@gmail.com">bibianaester@gmail.com</a>
-            </div>
-
-            <div className="item">
-            <AiFillSchedule className="icono" />
-          
-              <h3>Horario</h3>
-              <p>Lunes a Viernes</p>
-              <p>07:00 AM – 5:00 PM</p> 
-            </div>
-          </div>
-
- <div className="mapa">
-        <h3>Ubicación</h3>
-        <p> <b>Encuentra la ubicación de nuestro consultorio en el mapa </b></p>
-        <div className="mapa-container">
-        <MapaConsultorio />
-        </div>
-      </div>
-          
-     
-      
-        
+          </motion.div>
         </div>
       )}
     </div>
   );
 };
 
-export  default Contact;
+export default Contact;

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./appointment.css"; // Asegúrate de tener este archivo CSS
+import { motion } from "framer-motion";
+import { FaUser, FaPhone, FaIdCard, FaCalendarAlt, FaClock, FaWhatsapp, FaHospital, FaListAlt } from "react-icons/fa";
+import "./appointment.css";
 
 const AppointmentForm = () => {
   const [service, setService] = useState(localStorage.getItem("service") || "");
@@ -12,7 +14,6 @@ const AppointmentForm = () => {
   const [Regimen, setRegimen] = useState(localStorage.getItem("Regimen") || "");
   const [error, setError] = useState("");
 
-  // Guardar en localStorage cada vez que cambia un campo
   useEffect(() => {
     localStorage.setItem("service", service);
     localStorage.setItem("date", date);
@@ -22,16 +23,14 @@ const AppointmentForm = () => {
     localStorage.setItem("identi", identi);
     localStorage.setItem("Eps", Eps);
     localStorage.setItem("Regimen", Regimen);
-  }, [service, date, time, name, phone,identi,Eps,Regimen]);
+  }, [service, date, time, name, phone, identi, Eps, Regimen]);
 
-  // Validar que la fecha no sea menor a hoy
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
-    const today = new Date().toISOString().split("T")[0]; // Obtener la fecha actual en formato YYYY-MM-DD
-
+    const today = new Date().toISOString().split("T")[0];
     if (selectedDate < today) {
       setError("No puedes agendar citas en el pasado.");
-      setDate(""); // Limpiar el campo de fecha si es inválido
+      setDate("");
     } else {
       setError("");
       setDate(selectedDate);
@@ -40,109 +39,112 @@ const AppointmentForm = () => {
 
   const handleWhatsApp = () => {
     if (!service || !date || !time || !name || !phone || !identi || !Eps || !Regimen) {
-      alert("Por favor completa todos los campos.");
+      setError("Por favor completa todos los campos.");
       return;
-    }else{
-      alert(" nos comunicaremos por whatsapp");
-    };
-
+    } else {
+      setError("");
+    }
     const message = `Hola, quiero agendar una cita mi nombre es: ${name},
     mi identificacion es : ${identi},
     mi eps es: ${Eps}, 
     mi regimen es: ${Regimen},
- con la Especialidad   ${service} ,
-  el dia  ${date} a las ${time},
-   mi número es ${phone}.`;
-  //  este es el numero de la cita de whatsApp 
-   const whatsappURL = `https://wa.me/573122845333?text=${encodeURIComponent(message)}`;
-
+    con la Especialidad ${service},
+    el dia ${date} a las ${time},
+    mi número es ${phone}.`;
+    const whatsappURL = `https://wa.me/573122845333?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
   };
 
   return (
-    <div className="appointment-container">
-      <h2>Agendar Cita</h2>
-      <form className="appointment-form">
+    <motion.div
+      className="appointment-container"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
+      <h2>
+        <FaListAlt style={{ color: "#1976d2", marginRight: 8 }} />
+        Agendar Cita
+      </h2>
+      <form className="appointment-form" autoComplete="off">
         <div className="form-group">
-          <label>Especialidad:</label>
+          <label><FaListAlt /> Especialidad:</label>
           <select value={service} onChange={(e) => setService(e.target.value)}>
             <option value="">Selecciona una Especialidad</option>
-            <option value="Fonoaudiologia">Fonoaudiologia</option>
-            <option value="Psicologia">psicologia</option>
-            <option value="Terapia Fisica">Terapia Fisica</option>
+            <option value="Fonoaudiologia">Fonoaudiología</option>
+            <option value="Psicologia">Psicología</option>
+            <option value="Terapia Fisica">Terapia Física</option>
             <option value="Terapia Respiratoria">Terapia Respiratoria</option>
             <option value="Medicina General">Medicina General</option>
-            <option value="Terapia  Ocupacional">Terapia Ocupacional</option>
-            <option value="Ortepedia">Ortopedia</option>
+            <option value="Terapia Ocupacional">Terapia Ocupacional</option>
+            <option value="Nutricion">Nutricion </option>
+                <option value="Estetica Facial">Estetica Facial</option>
+                    <option value="Estentica Corporal">Estentica Corporal</option>
           </select>
         </div>
 
         <div className="form-group">
-          <label>Fecha:</label>
+          <label><FaCalendarAlt /> Fecha:</label>
           <input type="date" value={date} onChange={handleDateChange} />
-          {error && <p className="error-text">{error}</p>}
         </div>
 
-        <div className="form-group">
-          <label>Hora:</label>
+        {/* <div className="form-group">
+          <label><FaClock /> Hora:</label>
           <input type="time" value={time} onChange={(e) => setTime(e.target.value)} />
+        </div> */}
+
+        <div className="form-group">
+          <label><FaUser /> Nombre - apellido:</label>
+          <input type="text" placeholder="Tu nombre y apellido" value={name} onChange={(e) => setName(e.target.value)} />
         </div>
 
         <div className="form-group">
-          <label>Nombre - apellido:</label>
-          <input type="text" placeholder="Tu nombre y apellido " value={name} onChange={(e) => setName(e.target.value)} />
+          <label><FaIdCard /> Identificación:</label>
+          <input type="number" placeholder="Tu identificación" value={identi} onChange={(e) => setIdenti(e.target.value)} />
         </div>
-        
-        {/* identificacion */}
 
         <div className="form-group">
-          <label>Identificacion:</label>
-          <input type="number" placeholder="Tu identificacion" value={identi} onChange={(e) => setIdenti(e.target.value)} />
-        </div>
-
-        {/* Eps */}
-
-        <div className="form">
-          <label>EPS:</label>
+          <label><FaHospital /> EPS:</label>
           <select value={Eps} onChange={(e) => setEps(e.target.value)}>
-            <option value="">Selecciona Tu Eps</option>
-            <option value="nueva eps">NUEVA EPS.</option>
-            <option value="Salud total">SALUD TOTAL.</option>
-            <option value="coosalud">COOSALUD.</option>
-            <option value="capital salud">CAPITAL SALUD.</option>
-            <option value="caja copi">CAJACOPI.</option>
-            <option value="wayu">WAYU.</option>
-            <option value="aliansalud">ALIANSALUD.</option>
-            <option value="mutualser">MUTUALSER.</option>
-            <option value="magisterio">MAGISTERIO.</option>
-            <option value="particular">PARTICULAR.</option>
-            <option value="caja copi">CAJA COPI.</option>
-            <option value="savia saluug">SAVIA SALUD.</option>
-            <option value="sanitas">SANITAS</option>
-          </select>
-        </div>
-{/* Regimen */}
-        <div className="form-groupa">
-          <label>Regimen:</label>
-          <select value={Regimen} onChange={(e) => setRegimen(e.target.value)}>
-            <option value="">Selecciona Tu Regimen</option>
-            <option value="Fonoaudiologia">REGIMEN CONTRIBUTIVO CONTIZANTE  </option>
-            <option value="Psicologia">REGIMEN SUBSIDIADO</option>
-            <option value="Terapia Fisica">REGIMEN CONTRIBUTIVO CONTIZANTE</option>
-            <option value="no tengo regimen">NO TENGO REGIMEN</option>
-       
+            <option value="">Selecciona Tu EPS</option>
+            <option value="NUEVA EPS">NUEVA EPS</option>
+            <option value="SALUD TOTAL">SALUD TOTAL</option>
+            <option value="COOSALUD">COOSALUD</option>
+            <option value="CAPITAL SALUD">CAPITAL SALUD</option>
+            <option value="CAJACOPI">CAJACOPI</option>
+            <option value="WAYU">WAYU</option>
+            <option value="ALIANSALUD">ALIANSALUD</option>
+            <option value="MUTUALSER">MUTUALSER</option>
+            <option value="MAGISTERIO">MAGISTERIO</option>
+            <option value="PARTICULAR">PARTICULAR</option>
+            <option value="SAVIA SALUD">SAVIA SALUD</option>
+            <option value="SANITAS">SANITAS</option>
           </select>
         </div>
 
-{/* Telefono */}
         <div className="form-group">
-          <label>Teléfono:</label>
+          <label><FaListAlt /> Régimen:</label>
+          <select value={Regimen} onChange={(e) => setRegimen(e.target.value)}>
+            <option value="">Selecciona Tu Régimen</option>
+            <option value="REGIMEN CONTRIBUTIVO CONTIZANTE">RÉGIMEN CONTRIBUTIVO COTIZANTE</option>
+            <option value="REGIMEN SUBSIDIADO">RÉGIMEN SUBSIDIADO</option>
+            <option value="NO TENGO REGIMEN">NO TENGO RÉGIMEN</option>
+          </select>
+        </div>
+
+        <div className="form-group">
+          <label><FaPhone /> Teléfono:</label>
           <input type="tel" placeholder="Tu teléfono" value={phone} onChange={(e) => setPhone(e.target.value)} />
         </div>
 
-        <button type="button" onClick={handleWhatsApp }>Agendar por WhatsApp</button>
+        {error && <p className="error-text">{error}</p>}
+
+        <button type="button" onClick={handleWhatsApp}>
+          <FaWhatsapp style={{ marginRight: 8, fontSize: 20 }} />
+          Agendar por WhatsApp
+        </button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 

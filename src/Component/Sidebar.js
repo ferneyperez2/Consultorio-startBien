@@ -9,9 +9,10 @@ const Sidebar = () => {
   return (
     <>
       {/* Botón de menú hamburguesa */}
-      <button className="menu-btn" onClick={() => setIsOpen(!isOpen)}>
+      {/* este boton de  */}
+      {/* <button className="menu-btn" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <FaTimes /> : <FaBars />}
-      </button>
+      </button> */}
 
       {/* Menú lateral */}
       <nav className={`sidebar ${isOpen ? "open" : ""}`}>
